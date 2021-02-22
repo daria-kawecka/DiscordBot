@@ -1,7 +1,8 @@
 module.exports = {
   name: "spina",
   description: "Sprawdźmy nasze szanse",
-  execute(message, args) {
+  cmd: "!spina",
+  run(message, args, client) {
     let chance = (Math.random() * 101).toFixed(2);
     if (args.length) {
       message.reply(`${args}...hm... myślę, że mamy ${chance}% na zdanie.`);

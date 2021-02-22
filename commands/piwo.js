@@ -15,7 +15,8 @@ let beer = [
 module.exports = {
   name: "piwo",
   description: "Piwo!",
-  execute(message, args) {
+  cmd: "!piwo",
+  run(message, args, client) {
     if (args == "dzisiaj") {
       message.reply("no! Jedno, dwa... czy pięć!");
     } else if (args == "jutro") {
