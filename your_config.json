@@ -1,0 +1,7 @@
+{
+    "token" : "your_token_here",
+    "author" : "Daria Kawecka",
+    "botVersion" : "v1.0.0",
+    "prefix" : "!",
+    "special-message": "Be kind!"
+}
