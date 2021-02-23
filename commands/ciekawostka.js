@@ -5,7 +5,8 @@ module.exports = {
   name: "ciekawostka",
   description: "bezużyteczne ciekawostki",
   cmd: "!ciekawostka",
-  execute(message, args) {
+  run(message, args, client) {
+    console.log("jestem");
     axios.get(URL).then((res) => {
       translate(res.data.text, { from: "en", to: "pl" })
         .then((response) => {

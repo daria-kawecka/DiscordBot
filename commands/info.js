@@ -27,6 +27,6 @@ module.exports = {
 
 function getCommands(client, message) {
   const cmd = client.commands.map((command) => command.cmd);
-  exampleEmbed.spliceFields(5, cmd.length);
+  exampleEmbed.spliceFields(2, 1);
   exampleEmbed.addField("Dostępne komendy", cmd);
 }
