@@ -14,15 +14,19 @@ let beer = [
 
 module.exports = {
   name: "piwo",
-  description: "Piwo!",
-  cmd: "!piwo",
+  description: "Bo piwo... w życiu studenta ważne jest",
+  cmd: "!piwo, !piwo info, !piwo dzisiaj, !piwo jutro",
   run(message, args, client) {
     if (args == "dzisiaj") {
       message.reply("no! Jedno, dwa... czy pięć!");
     } else if (args == "jutro") {
       message.reply("co masz zrobić jutro, lepiej zrób dzisiaj :)");
+    } else if (args == "info") {
+      message.reply(
+        "``!piwo - bo piwo... w życiu studenta ważne jest. Możliwe argumenty 'dzisiaj','jutro'.``"
+      );
     } else {
-      let index = Math.floor(Math.random() * beer.length + 1);
+      let index = Math.floor(Math.random() * beer.length);
       message.reply(beer[index]);
     }
   },
