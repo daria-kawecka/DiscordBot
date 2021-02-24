@@ -49,6 +49,7 @@ async function getMarsPhoto(message, args) {
         .setTitle("🪐 Wow, to Twoje losowe zdjęcie z Marsa!!!")
         .setImage(res.data.photos[index].img_src)
         .setFooter("Łazik " + res.data.photos[index].rover.name);
+      console.log(res.data.photos[index]);
       message.channel.send(MarsEmbed);
     })
     .catch((err) => {
