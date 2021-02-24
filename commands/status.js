@@ -8,7 +8,8 @@ module.exports = {
 };
 
 function getStatus(args, client) {
-  const content = args.toString().replace(",", " ");
+  const newStr = args.toString().replace("/,/g", "-");
+  const content = args.toString().replace(/,/g, " ");
   client.user.setPresence({
     activity: {
       name: content,

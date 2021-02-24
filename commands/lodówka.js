@@ -49,13 +49,12 @@ async function getRecipe(message) {
 
 async function getIngredients(message, args) {
   URL = "http://www.recipepuppy.com/api/?i=";
-  args = args[0].split(",");
-  for (arg of args) {
-    await translate(arg, { from: "pl", to: "en" }).then((response) => {
-      let ingredient = response.text.replace(/\s+/g, "").replace(",", "");
-      URL += ingredient + ","; //remove white spaces between ingredients
-    });
-  }
+  args = args.toString().replace(/,/g, " ");
+  console.log(args);
+  await translate(args, { from: "pl", to: "en" }).then((response) => {
+    let ingredient = response.text.replace(" ", ",");
+    URL += ingredient + ","; //remove white spaces between ingredients
+  });
 }
 async function getRecipeWithIngredients(message, args) {
   await getIngredients(message, args);
