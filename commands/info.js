@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const { author, botVersion } = require("../config.json");
 
-const exampleEmbed = new Discord.MessageEmbed()
+const infoEmbed = new Discord.MessageEmbed()
   .setColor("#ff3399")
   .setTitle("👍 Wieczny student 👍")
   .setDescription("Poznajmy się lepiej")
@@ -21,12 +21,12 @@ module.exports = {
   cmd: "!info",
   run(message, args, client) {
     getCommands(client, message);
-    message.channel.send(exampleEmbed);
+    message.channel.send(infoEmbed);
   },
 };
 
 function getCommands(client, message) {
   const cmd = client.commands.map((command) => command.cmd);
-  exampleEmbed.spliceFields(2, 1);
-  exampleEmbed.addField("Dostępne komendy", cmd);
+  infoEmbed.spliceFields(2, 1);
+  infoEmbed.addField("Dostępne komendy", cmd);
 }

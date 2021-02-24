@@ -3,5 +3,6 @@
     "author" : "Daria Kawecka",
     "botVersion" : "v1.0.0",
     "prefix" : "!",
-    "special-message": "Be kind!"
+    "NASA-api" : "https://api.nasa.gov/ <--- get your own API Key",
+    "special-message": "Be kind"
 }

@@ -10,7 +10,6 @@ module.exports = {
     axios.get(URL).then((res) => {
       translate(res.data.text, { from: "en", to: "pl" })
         .then((response) => {
-          console.log(response.text);
           message.reply(" słuchaj tego! 😲 " + response.text);
         })
         .catch((err) => {
