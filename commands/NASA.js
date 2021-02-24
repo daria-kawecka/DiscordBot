@@ -48,8 +48,7 @@ async function getMarsPhoto(message, args) {
         .setColor("#ff9966")
         .setTitle("🪐 Wow, to Twoje losowe zdjęcie z Marsa!!!")
         .setImage(res.data.photos[index].img_src)
-        .setFooter("Łazik " + res.data.photos[index].rover.name)
-        .setTimestamp();
+        .setFooter("Łazik " + res.data.photos[index].rover.name);
       message.channel.send(MarsEmbed);
     })
     .catch((err) => {
